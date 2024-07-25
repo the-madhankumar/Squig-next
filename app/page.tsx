@@ -41,6 +41,9 @@ export default function Home() {
           <Hero />
         </div>
       </div>
+      <div>
+        <Link href={"/index.html"}><p>Test</p></Link>
+      </div>
       <section id="introduction">
         <Introduction />
       </section>
