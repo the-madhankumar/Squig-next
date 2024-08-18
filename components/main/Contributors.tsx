@@ -1,9 +1,10 @@
 "use client";
 import { CardStack } from "../ui/card-stack";
 import { cn } from "@/utils/cn";
+
 export function Contributors() {
   return (
-    <div className="h-[40rem] flex flex-col items-center justify-center w-full">
+    <div className="h-[40rem] flex flex-col items-center justify-center w-full bg-gradient-to-b from-gray-300 via-gray-300 dark:from-gray-900 dark:via-gray-800">
       <div className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-8">
         Contributors
       </div>
@@ -12,7 +13,6 @@ export function Contributors() {
   );
 }
 
-// Small utility to highlight the content of specific section of a testimonial content
 export const Highlight = ({
   children,
   className,
@@ -35,39 +35,21 @@ export const Highlight = ({
 const CARDS = [
   {
     id: 0,
-    name: "Manu Arora",
-    designation: "Senior Software Engineer",
+    name: "Harish",
+    designation: "Founder",
     content: (
       <p>
-        These cards are amazing, <Highlight>I want to use them</Highlight> in my
-        project. Framer motion is a godsend ngl tbh fam 🙏
+        As the founder, <Highlight>Harish</Highlight> has led the way with vision and dedication. Currently in the 4th year of studies, he has played a pivotal role in shaping the project.
       </p>
     ),
   },
   {
     id: 1,
-    name: "Elon Musk",
-    designation: "Senior Shitposter",
+    name: "Madhan Kumar M",
+    designation: "Contributor",
     content: (
       <p>
-        I dont like this Twitter thing,{" "}
-        <Highlight>deleting it right away</Highlight> because yolo. Instead, I
-        would like to call it <Highlight>X.com</Highlight> so that it can easily
-        be confused with adult sites.
-      </p>
-    ),
-  },
-  {
-    id: 2,
-    name: "Tyler Durden",
-    designation: "Manager Project Mayhem",
-    content: (
-      <p>
-        The first rule of
-        <Highlight>Fight Club</Highlight> is that you do not talk about fight
-        club. The second rule of
-        <Highlight>Fight club</Highlight> is that you DO NOT TALK about fight
-        club.
+        <Highlight>Madhan Kumar M</Highlight> is a contributor currently studying in the 3rd year. His contributions have been instrumental in the development and success of our project.
       </p>
     ),
   },

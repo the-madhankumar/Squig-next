@@ -395,8 +395,8 @@ export function Footer() {
   ];
 
   return (
-    <div className="flex flex-row items-center justify-center py-0 h-screen md:h-auto dark:bg-transparent bg-white relative w-full">
-      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
+    <div className="flex flex-row items-center justify-center h-screen md:h-auto bg-gradient-to-b from-white via-gray-100 to-gray-50 dark:from-transparent dark:via-gray-800 dark:to-gray-700 relative w-full">
+      <div className="w-full mx-auto relative overflow-hidden h-full md:h-[40rem] px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -411,7 +411,7 @@ export function Footer() {
           </p>
         </motion.div>
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b from-transparent dark:to-black to-white z-40" />
-        <div className="relative w-112 -bottom-20 h-52 md:h-full z-10">
+        <div className="relative w-49 -bottom-20 h-52 md:h-full z-10">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>

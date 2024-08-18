@@ -7,19 +7,22 @@ export default function Learn() {
   const { theme } = useTheme();
 
   return (
-    <div className="mx-0 flex flex-col items-center justify-center min-h-screen bg-white dark:bg-gray-900">
+    <div className="flex flex-col items-center justify-center bg-gradient-to-b from-white to-gray-100 dark:from-gray-900 dark:to-black py-8 px-4 sm:px-6 md:px-10 lg:px-12 px-10">
       <h1
-        className={`mx-10 text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-center p-4 md:p-6 rounded-lg ${
+        className={`text-center text-transparent bg-clip-text bg-gradient-to-r ${
           theme === 'light' 
-            ? 'bg-gradient-to-r from-green-100 via-blue-100 to-aqua-blue-300 text-black rounded-lg' 
-            : 'bg-gradient-to-r from-blue-800 via-purple-700 dark:text-white'
-        }`}
+            ? 'from-green-400 via-blue-500 to-purple-600' 
+            : 'from-green-200 via-blue-300 to-purple-400'
+        } text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 sm:mb-8 lg:mb-10`}
       >
-        Dive into the World of SQUIG: The Future of Programming Awaits!
+        Experience the Power of SQUIG: The Ultimate Programming Language
       </h1>
-      <button className="relative inline-flex items-center justify-center px-6 py-2 md:px-8 md:py-3 overflow-hidden font-bold text-white rounded-lg shadow-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 dark:bg-gradient-to-r dark:from-blue-900 dark:to-purple-900 dark:hover:from-blue-800 dark:hover:to-purple-800">
-        <span className="absolute inset-0 w-full h-full border-4 border-white rounded-lg"></span>
-        <span className="relative"><Link href={"/index.html"}>Learn</Link></span>
+      <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-md sm:max-w-lg md:max-w-2xl text-center mb-6 sm:mb-8 lg:mb-10">
+        Join the revolution and master the future of coding with SQUIG. A language designed to empower developers with simplicity, speed, and unmatched capabilities.
+      </p>
+      <button className="relative inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-bold text-white text-sm sm:text-base md:text-lg rounded-full shadow-2xl transition-transform transform hover:scale-105 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 dark:from-purple-800 dark:to-blue-800 dark:hover:from-purple-900 dark:hover:to-blue-900">
+        <span className="absolute inset-0 w-full h-full bg-white opacity-10 rounded-full"></span>
+        <span className="relative z-10"><Link href={"/index.html"}>Start Learning Now</Link></span>
       </button>
     </div>
   );

@@ -21,7 +21,7 @@ export default function Home() {
   const { theme } = useTheme();
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between w-full p-0 m-0">
+    <main className="flex  flex-col items-center justify-between w-full p-0 m-0">
       <div className="relative w-full flex items-center justify-center">
         <Navbar className={`top-2`} />
       </div>
@@ -57,13 +57,13 @@ export default function Home() {
       <section>
         <Learn/>
       </section>
-      <section id="download">
+      <section id="download" className="w-full">
         <DownloadSection />
       </section>
-      <section id="contributors">
+      <section id="contributors" className="w-full">
         <Contributors />
       </section>
-      <div className="mt-[170px] sm:m-0 sm:p-2 sm:mt-0 p-4">
+      <div className="mt-[170px] w-full">
         <Footer />
       </div>
     </main>
