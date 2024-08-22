@@ -60,9 +60,9 @@ export default function Home() {
       <section id="download" className="w-full">
         <DownloadSection />
       </section>
-      <section id="contributors" className="w-full">
+      {/* <section id="contributors" className="w-full">
         <Contributors />
-      </section>
+      </section> */}
       <div className="mt-[170px] w-full">
         <Footer />
       </div>
