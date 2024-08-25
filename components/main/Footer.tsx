@@ -1,14 +1,14 @@
 // "use client";
 import React from "react";
 import { motion } from "framer-motion";
-// import dynamic from "next/dynamic";
+import dynamic from "next/dynamic";
 import sampleArcs from "@/data/arcs";
 import globeConfig from "@/data/globe.config";
-import { World } from "@/components/ui/globe";
+// import { World } from "@/components/ui/globe";
 
-// const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
-//   ssr: true,
-// });
+const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
+  ssr: false,
+});
 
 export function Footer() {
   
