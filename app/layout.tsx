@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Roboto({weight : "300" , subsets : ["latin"]});
 
 export const metadata: Metadata = {
-  title: "SQUIG",
-  description: "flexible programming",
+  title: "Squig",
+  description: "A Programming Language",
+  // icons : "/squig.png"
 };
 
 export default function RootLayout({
@@ -18,14 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <ThemeProvider
+      {/* <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
-          >
+          > */}
         {children}
-        </ThemeProvider>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );

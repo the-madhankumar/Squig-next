@@ -16,19 +16,20 @@ import { useTheme } from "next-themes";
 import { Contributors } from "@/components/main/Contributors";
 import { HoveredLink, Menu, MenuItem } from "@/components/ui/navbar-menu";
 import Learn from "@/components/main/learn";
+// import { AuroraBackground } from "@/components/ui/aurora-background";
 
 export default function Home() {
-  const { theme } = useTheme();
+  // const { theme } = useTheme();
 
   return (
-    <main className="flex  flex-col items-center justify-between w-full p-0 m-0">
-      <div className="relative w-full flex items-center justify-center">
+    <main className="flex bg-gradient-to-tr from-gray-900 to-black flex-col items-center justify-between w-full p-0 m-0">
+      {/* <div className="relative w-full flex items-center justify-center">
         <Navbar className={`top-2`} />
-      </div>
-      <div
-        className={`h-[40rem] relative w-full flex flex-col items-center justify-center overflow-hidden rounded-md`}>
-        <div className="w-full absolute inset-0 h-screen">
-          <SparklesCore
+      </div> */}
+      {/* <div
+        className={`relative w-full flex flex-col items-center justify-center overflow-hidden rounded-md`}> */}
+        {/* <div className="w-full absolute inset-0 h-screen"> */}
+          {/* <SparklesCore
             id="tsparticlesfullpage"
             background="transparent"
             minSize={0.6}
@@ -36,36 +37,19 @@ export default function Home() {
             particleDensity={100}
             className="w-full h-full"
             particleColor="#FFFFFF"
-          />
-        </div>
-        <div className="mt-[170px] sm:m-0">
+          /> */}
           <Hero />
-        </div>
-      </div>
-      <section id="introduction">
+       
         <Introduction />
-      </section>
-      <section id="alpha">
-        <Alpha />
-      </section>
-      <section id="key-features">
+        {/* <Alpha /> */}
         <KeyFeatures />
-      </section>
-      <section id="evolution">
         <EvolutionSection />
-      </section>
-      <section>
         <Learn/>
-      </section>
-      <section id="download" className="w-full">
-        <DownloadSection />
-      </section>
-      {/* <section id="contributors" className="w-full">
         <Contributors />
-      </section> */}
-      <div className="mt-[170px] w-full">
         <Footer />
-      </div>
+      {/* <section id="download" className="w-full">
+        <DownloadSection />
+      </section> */}
     </main>
   );
 }
