@@ -1,6 +1,8 @@
 // "use client";
 import React from "react";
 import Image from "next/image";
+// import { Button } from "../ui/button";
+import { FaGithub } from "react-icons/fa";
 // import { FlipWords } from "../ui/flip-words";
 
 // import { useCallback, useEffect, useState } from "react";
@@ -14,7 +16,7 @@ export function Hero() {
 
   // const [ init, setInit ] = useState(false);
 
-    // this should be run only once per application lifetime
+  // this should be run only once per application lifetime
   //   useEffect(() => {
   //       initParticlesEngine(async (engine) => {
   //           // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -41,8 +43,9 @@ export function Hero() {
 
   return (
     <div className="flex h-screen justify-center items-center">
+      <FaGithub />
       <div className="flex justify-center items-center">
-        <Image 
+        <Image
           src="/squig.png"
           alt="Squig"
           width={450}
@@ -52,16 +55,23 @@ export function Hero() {
         />
       </div>
       <div className="text-6xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
-        <div>
-        <h2 className={`text-white inline  text-8xl font-extrabold `}>
+        <div className="flex flex-col justify-center items-center">
+          <div className="h-[4em]">
+            <div className="h-1/2"/>
+            <h2 className={`h-1/2 text-white inline  text-8xl font-extrabold `}>
               SQUIG
-        </h2>
-        <sub className="text-[0.5em] text-gray-500">Alpha</sub>
+            </h2>
+            <sub className="text-[0.5em] text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-blue-400  ">alpha</sub>
+          </div>
+          <div className="flex gap-5 w-full justify-between items-center">
+            <button className="border hover:border-gray-200 border-gray-600 text-white p-4 px-16 text-lg rounded-lg">Learn</button>
+            <button className="border hover:border-gray-200 border-gray-600 text-white p-4 px-14 text-lg rounded-lg">Download</button>
+          </div>
         </div>
-      
+
         {/* Explore a new<br/> way for
         <FlipWords words={words} /> <br /> */}
-      {/* <div className="flex gap-10">
+        {/* <div className="flex gap-10">
         <Button>Download</Button>
         <Button>Learn</Button>
       </div> */}

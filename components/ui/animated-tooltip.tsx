@@ -12,15 +12,16 @@ import Link from "next/link";
 
 export const AnimatedTooltip = ({
   items,
-}: {
-  items: {
-    id: number;
-    name: string;
-    designation: string;
-    image: string;
-    link : string,
-  }[];
-}) => {
+}: any //{
+//   items: {
+//     id: number;
+//     login: string;
+//     designation: string;
+//     avatar_url: string;
+//     html_url : string,
+//   }[];
+// }
+) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const springConfig = { stiffness: 100, damping: 5 };
   const x = useMotionValue(0); // going to set this value on mouse move
@@ -39,12 +40,14 @@ export const AnimatedTooltip = ({
     x.set(event.nativeEvent.offsetX - halfWidth); // set the x value, which is then used in transform and rotate
   };
 
+  console.log(items)
+
   return (
     <>
-      {items.map((item, idx) => (
+      {items.map((item : any , idx : any) => (
         <div
           className="-mr-4  relative group"
-          key={item.name}
+          key={item.login}
           onMouseEnter={() => setHoveredIndex(item.id)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -73,19 +76,19 @@ export const AnimatedTooltip = ({
                 <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
                 <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " />
                 <div className="font-bold text-white relative z-30 text-base">
-                  {item.name}
+                  {item.login}
                 </div>
                 <div className="text-white text-xs">{item.designation}</div>
               </motion.div>
             )}
           </AnimatePresence>
-          <Link href={item.link} target="blank_">
+          <Link href={item.html_url} target="blank_">
           <Image
             onMouseMove={handleMouseMove}
             height={100}
             width={100}
-            src={item.image}
-            alt={item.name}
+            src={item.avatar_url}
+            alt={item.login}
             className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 border-2 group-hover:scale-105 group-hover:z-30 border-white  relative transition duration-500"
           />
           </Link>

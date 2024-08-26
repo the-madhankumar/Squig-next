@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
@@ -30,7 +30,7 @@ export function Footer() {
         </motion.div>
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b from-transparent to-black z-40" />
         <div className="relative w-49 -bottom-20 h-52 md:h-full z-10">
-          <World data={sampleArcs} globeConfig={globeConfig} />
+          {/* <World data={sampleArcs} globeConfig={globeConfig} /> */}
         </div> 
       </div>
     </div>
