@@ -2,7 +2,7 @@
 // import React from "react";
 import KeyFeatures from "@/components/main/About/KeyFeatures";
 import Link from "next/link";
-import Learn from "@/components/main/Learn";
+// import Learn from "@/components/main/Learn";
 // import Learn from "@/components/main/learn";
 import EvolutionSection from "@/components/main/About/Evolution";
 import { Hero } from "@/components/main/Hero";
@@ -10,6 +10,7 @@ import { Footer } from "@/components/main/Footer";
 // import { Introduction } from "@/components/main/About/Introduction";
 import { Contributors } from "@/components/main/Contributors";
 import { FaGithub } from "react-icons/fa";
+import {Learn} from "@/components/main/learn";
 // import { cn } from "@/utils/cn";
 // import Alpha from "@/components/main/About/Alpha";
 // import { DownloadSection } from "@/components/main/Download";
