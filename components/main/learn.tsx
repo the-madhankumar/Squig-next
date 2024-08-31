@@ -1,19 +1,15 @@
 'use client';
 
-import { useTheme } from 'next-themes';
+// import { useTheme } from 'next-themes';
 import Link from 'next/link';
 
 export default function Learn() {
-  const { theme } = useTheme();
+  // const { theme } = useTheme();
 
   return (
     <div className="flex flex-col items-center justify-center ">
       <h1
-        className={`text-center text-transparent h-[2.5em] bg-clip-text bg-gradient-to-r ${
-          theme === 'light' 
-            ? 'from-green-400 via-blue-500 to-purple-600' 
-            : 'from-green-200 via-blue-300 to-purple-400'
-        } text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 sm:mb-8 lg:mb-10`}
+        className={`text-center text-transparent h-[2.5em] bg-clip-text bg-gradient-to-r from-green-200 via-blue-300 to-purple-400 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 sm:mb-8 lg:mb-10`}
       >
         Experience the Power of SQUIG: A Programming Language
       </h1>

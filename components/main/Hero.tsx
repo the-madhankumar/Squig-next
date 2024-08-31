@@ -1,8 +1,8 @@
 // "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 // import { Button } from "../ui/button";
-import { FaGithub } from "react-icons/fa";
 // import { FlipWords } from "../ui/flip-words";
 
 // import { useCallback, useEffect, useState } from "react";
@@ -43,7 +43,7 @@ export function Hero() {
 
   return (
     <div className="flex h-screen justify-center items-center">
-      <FaGithub />
+      
       <div className="flex justify-center items-center">
         <Image
           src="/squig.png"
@@ -61,11 +61,15 @@ export function Hero() {
             <h2 className={`h-1/2 text-white inline  text-8xl font-extrabold `}>
               SQUIG
             </h2>
-            <sub className="text-[0.5em] text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-blue-400  ">alpha</sub>
+            <sub className="text-[0.3em] text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-blue-400  ">alpha</sub>
           </div>
           <div className="flex gap-5 w-full justify-between items-center">
-            <button className="border hover:border-gray-200 border-gray-600 text-white p-4 px-16 text-lg rounded-lg">Learn</button>
+            <Link href={"/index.html"}>
+              <button className="border hover:border-gray-200 border-gray-600 text-white p-4 px-16 text-lg rounded-lg">Learn</button>
+            </Link>
+            <Link href={"#"}>
             <button className="border hover:border-gray-200 border-gray-600 text-white p-4 px-14 text-lg rounded-lg">Download</button>
+            </Link>
           </div>
         </div>
 

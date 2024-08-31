@@ -2,8 +2,8 @@
 // import { useEffect } from "react";
 import { AnimatedTooltip } from "../ui/animated-tooltip";
 // import { CardStack } from "../ui/card-stack";
-import { cn } from "@/utils/cn";
-import axios, { Axios, AxiosResponse } from "axios";
+// import { cn } from "@/utils/cn";
+import axios, { AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
 
 export function Contributors() {
@@ -17,12 +17,13 @@ export function Contributors() {
         "https://api.github.com/repos/Harish-M-2003/Squig-next/contributors"
       );
       setContributors(response.data);
-      setLoading(false);
+
     } catch (error) {
       console.error("Failed to fetch contributors:", error);
       setContributors([]);
-      setLoading(false);
     }
+
+    setLoading(false);
   }
 
   useEffect(() => {
@@ -36,32 +37,35 @@ export function Contributors() {
       </div>
 
       {
-        (loading) ? <></> : <div className="flex">
-          <AnimatedTooltip items={contributors} />
-        </div>
+        (loading) ?
+          <></>
+          :
+          <div className="flex">
+            <AnimatedTooltip items={contributors} />
+          </div>
       }
 
     </div>
   );
 }
 
-export const Highlight = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
-  return (
-    <span
-      className={cn(
-        "font-bold bg-emerald-100 text-emerald-700 dark:bg-emerald-700/[0.2] dark:text-emerald-500 px-1 py-0.5 mt-0",
-        className
-      )}
-    >
-      {children}
-    </span>
-  );
-};
+// export const Highlight = ({
+//   children,
+//   className,
+// }: {
+//   children: React.ReactNode;
+//   className?: string;
+// }) => {
+//   return (
+//     <span
+//       className={cn(
+//         "font-bold bg-emerald-100 text-emerald-700 dark:bg-emerald-700/[0.2] dark:text-emerald-500 px-1 py-0.5 mt-0",
+//         className
+//       )}
+//     >
+//       {children}
+//     </span>
+//   );
+// };
 
 
