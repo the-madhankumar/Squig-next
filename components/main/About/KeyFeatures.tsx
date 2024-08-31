@@ -13,6 +13,8 @@ const FeatureBlock: React.FC<FeatureBlockProps> = ({ title, content }) => (
 )
 
 const KeyFeatures: React.FC = () => {
+  const content = `Squig, a programming language crafted with a passion for exploration. Unlike traditional languages, Squig doesn't chase performance efficiency or real-world applications—at least not yet.
+        Instead, it's a playground, a place to experiment and learn without the pressure of practical use. Think of Squig as a canvas for your coding creativity, where you're free to explore ideas and push the boundaries of what's possible in programming.`
   return (
     <div className='flex flex-col sm:my-1 mx-auto rounded-lg p-8 shadow-md'>
       <section className='mb-12'>
@@ -25,8 +27,7 @@ const KeyFeatures: React.FC = () => {
               What is Squig?
           </h2>
         <p className='text-lg leading-relaxed'>
-        Squig, a programming language crafted with a passion for exploration. Unlike traditional languages, Squig doesn't chase performance efficiency or real-world applications—at least not yet.
-        Instead, it's a playground, a place to experiment and learn without the pressure of practical use. Think of Squig as a canvas for your coding creativity, where you're free to explore ideas and push the boundaries of what's possible in programming.
+        {content}
         </p>
       </section>
 

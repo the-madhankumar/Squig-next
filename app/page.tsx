@@ -2,12 +2,12 @@
 // import React from "react";
 import KeyFeatures from "@/components/main/About/KeyFeatures";
 import Link from "next/link";
-// import Learn from "@/components/main/Learn";
-import Learn from "@/components/main/learn";
+import Learn from "@/components/main/Learn";
+// import Learn from "@/components/main/learn";
 import EvolutionSection from "@/components/main/About/Evolution";
 import { Hero } from "@/components/main/Hero";
 import { Footer } from "@/components/main/Footer";
-import { Introduction } from "@/components/main/About/Introduction";
+// import { Introduction } from "@/components/main/About/Introduction";
 import { Contributors } from "@/components/main/Contributors";
 import { FaGithub } from "react-icons/fa";
 // import { cn } from "@/utils/cn";
