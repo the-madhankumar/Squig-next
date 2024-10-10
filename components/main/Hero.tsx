@@ -42,7 +42,7 @@ export function Hero() {
   // ];
 
   return (
-    <div className="flex h-screen justify-center items-center">
+    <div className="flex flex-col lg:flex-row h-screen justify-center items-center">
       
       <div className="flex justify-center items-center">
         <Image
@@ -51,7 +51,7 @@ export function Hero() {
           width={450}
           height={450}
           draggable={false}
-          className="object-contain z-10"
+          className="w-full object-contain z-10"
         />
       </div>
       <div className="text-6xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">

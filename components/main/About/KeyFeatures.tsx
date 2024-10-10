@@ -36,7 +36,7 @@ const KeyFeatures: React.FC = () => {
         <h2 className={`text-transparent h-[1.5em] bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-4xl font-extrabold `}>
               Key Features
           </h2>
-        <div className='space-y-8 grid grid-cols-2'>
+        <div className='flex flex-col space-y-4 lg:grid lg:grid-cols-2'>
           <FeatureBlock
             title="Expanded Options in Simplicity"
             content="Squig isn't just about minimalism; it's about giving developers additional avenues to explore simplicity, allowing for a coding experience tailored to individual preferences."

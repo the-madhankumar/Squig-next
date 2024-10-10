@@ -11,7 +11,7 @@ const EvolutionSection = () => {
           <h2 className={`text-center text-transparent h-[1.5em] bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold `}>
               Evolution of Squig
           </h2>
-          <p className="text-lg text-gray-300">
+          <p className="text-center text-lg text-gray-300">
             Over three years, Squig has evolved significantly, facing challenges and embracing innovation.
           </p>
         </div>
