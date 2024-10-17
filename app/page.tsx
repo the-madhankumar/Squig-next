@@ -10,12 +10,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { SparklesCore } from "@/components/ui/sparkles";
 import EvolutionSection from "@/components/main/About/Evolution";
-import { Footer } from "@/components/main/Footer";
 import { Mode } from "@/components/Mode";
 import { useTheme } from "next-themes";
 import { Contributors } from "@/components/main/Contributors";
 import { HoveredLink, Menu, MenuItem } from "@/components/ui/navbar-menu";
 import Learn from "@/components/main/learn";
+import Footer from "@/components/main/Footer";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -63,7 +63,7 @@ export default function Home() {
       <section id="contributors" className="w-full">
         <Contributors />
       </section>
-      <div className="mt-[170px] w-full">
+      <div className="w-full">
         <Footer />
       </div>
     </main>

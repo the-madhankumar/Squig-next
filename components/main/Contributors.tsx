@@ -1,15 +1,13 @@
 "use client";
-// import { useEffect } from "react";
+
 import { AnimatedTooltip } from "../ui/animated-tooltip";
-// import { CardStack } from "../ui/card-stack";
-// import { cn } from "@/utils/cn";
-import axios, { AxiosResponse } from "axios";
+import axios from "axios";
 import { useEffect, useState } from "react";
 
 export function Contributors() {
-
-  const [contributors, setContributors] = useState<AxiosResponse[]>([]);
+  const [contributors, setContributors] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   async function updateContributors() {
     try {
@@ -17,13 +15,13 @@ export function Contributors() {
         "https://api.github.com/repos/Harish-M-2003/Squig-next/contributors"
       );
       setContributors(response.data);
-
     } catch (error) {
       console.error("Failed to fetch contributors:", error);
+      setError("Failed to load contributors.");
       setContributors([]);
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   }
 
   useEffect(() => {
@@ -31,41 +29,22 @@ export function Contributors() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-[20em]">
+    <div className="flex flex-col items-center justify-center w-full h-[10em] bg-gradient-to-b from-gray-300 dark:from-gray-900 dark:to-gray-900 my-0 py-0"> {/* Set my-0 and py-0 */}
       <div className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-8">
         Contributors
       </div>
 
-      {
-        (loading) ?
-          <></>
-          :
-          <div className="flex">
-            <AnimatedTooltip items={contributors} />
-          </div>
-      }
-
+      {loading ? (
+        <div className="text-lg">Loading...</div>
+      ) : error ? (
+        <div className="text-red-500">{error}</div>
+      ) : contributors.length === 0 ? (
+        <div className="text-lg">No contributors found.</div>
+      ) : (
+        <div className="flex">
+          <AnimatedTooltip items={contributors} />
+        </div>
+      )}
     </div>
   );
 }
-
-// export const Highlight = ({
-//   children,
-//   className,
-// }: {
-//   children: React.ReactNode;
-//   className?: string;
-// }) => {
-//   return (
-//     <span
-//       className={cn(
-//         "font-bold bg-emerald-100 text-emerald-700 dark:bg-emerald-700/[0.2] dark:text-emerald-500 px-1 py-0.5 mt-0",
-//         className
-//       )}
-//     >
-//       {children}
-//     </span>
-//   );
-// };
-
-
